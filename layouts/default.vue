@@ -5,6 +5,12 @@
       <slot />
     </main>
   </div>
+  <hr>
+  <v-footer class="p-0">
+    <v-col class="text-center" cols="12" style="background-color: #0f172a; color: #f5f5f5;">
+      © {{ new Date().getFullYear() }} SeteAO. Todos os direitos reservados.
+    </v-col>
+  </v-footer>
 </template>
 <style>
 
