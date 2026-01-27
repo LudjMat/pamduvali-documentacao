@@ -1,21 +1,29 @@
 <template>
-  <div class="flex min-h-screen bg-[#0f172a]" style="background-color: #0f172a">
-    <Sidebar />
-    <main class="px-6 py-6 flex-1 overflow-y-auto  ">
-      <slot />
-    </main>
-  </div>
-  <hr>
-  <v-footer class="p-0">
-    <v-col class="text-center" cols="12" style="background-color: #0f172a; color: #f5f5f5;">
-      © {{ new Date().getFullYear() }} SeteAO. Todos os direitos reservados.
-    </v-col>
-  </v-footer>
-</template>
-<style>
+  <v-app>
+    <v-app-bar color="surface" flat style="border-bottom: 3px solid white;">
+      <v-app-bar-nav-icon 
+        class="text-grey-lighten-4" 
+        @click="drawer = !drawer" 
+      />
+      <v-toolbar-title>SeteAO Docs</v-toolbar-title>
+    </v-app-bar>
 
-*{
- 
-  color: #f5f5f5;
-}
-</style>
+    <v-navigation-drawer
+      v-model="drawer"
+      color="surface"
+      width="250"
+    >
+      <Sidebar />
+    </v-navigation-drawer>
+
+    <v-main class="pa-6" style="margin-top: 3.5rem">
+      <slot />
+    </v-main>
+
+    </v-app>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+const drawer = ref(true)
+</script>
