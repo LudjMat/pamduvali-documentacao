@@ -1,7 +1,7 @@
 <template>
   <div class="text-[#f5f5f5]">
     <h1 class="text-4xl font-bold mb-6 text-[#3abbf5]">
-      Introdução - Salmy, Helonoa, Heniqeqn
+      Introdução
     </h1>
 
     <p class="mb-4">
