@@ -18,6 +18,7 @@ const items = [
   { title: 'Introdução', to: '/docs/introducao' },
   { title: 'Léxica', to: '/docs/lexica' },
   { title: 'Sintaxe', to: '/docs/sintaxe' },
+  { title: 'Cores', to: '/docs/cores' },
   { title: 'Tipos', to: '/docs/tipos' },
   { title: 'Operadores', to: '/docs/operadores' },
   { title: 'Condicionais', to: '/docs/condicionais' },
