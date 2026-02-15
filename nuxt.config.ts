@@ -2,11 +2,17 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
+
+  // Reduz tempo de rebuild e risco de timeout no dev (Nuxt 4)
+  experimental: {
+    buildCache: true
+  },
+
   app: {
     head: {
-      title: 'Pamduvali Docs',
+      title: 'SeteAO Docs',
       meta: [
-        { name: 'description', content: 'Documentação oficial da linguagem Pamduvali' },
+        { name: 'description', content: 'Documentação oficial da linguagem SeteAO e do compilador Pandu-Vali' },
         { name: 'theme-color', content: '#0f172a' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ],
@@ -25,7 +31,11 @@ export default defineNuxtConfig({
   vite: {
     ssr: {
       noExternal: ['vuetify']
-    }
+    },
+    // Pré-empacota dependências pesadas para evitar timeout ao carregar módulos
+    optimizeDeps: {
+      include: ['vuetify']
+    },
   },
   fonts: {
   families: [

@@ -5,11 +5,13 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "dev:clean": "nuxi cleanup && nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "@nuxt/fonts": "^0.12.1",
     "nuxt": "^4.2.2",
     "sass": "^1.97.3",

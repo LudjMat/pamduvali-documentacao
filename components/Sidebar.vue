@@ -13,10 +13,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const drawer = ref(true)
-
 const items = [
   { title: 'Home', to: '/' },
   { title: 'Introdução', to: '/docs/introducao' },
@@ -26,6 +22,8 @@ const items = [
   { title: 'Operadores', to: '/docs/operadores' },
   { title: 'Condicionais', to: '/docs/condicionais' },
   { title: 'Ciclos', to: '/docs/ciclos' },
+  { title: 'Entrada e Saída', to: '/docs/entrada-saida' },
+  { title: 'Funções Matemáticas', to: '/docs/funcoes-matematicas' },
   { title: 'Exemplos', to: '/docs/exemplos' },
   { title: 'Erros', to: '/docs/erros' },
   { title: 'Arquitetura', to: '/docs/arquitetura' },
