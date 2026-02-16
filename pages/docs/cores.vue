@@ -37,31 +37,33 @@ EXIBIR ( cor ) .
       />
     </div>
 
-    <v-table density="comfortable">
-      <thead>
-        <tr>
-          <th class="text-left">Pré-visualização</th>
-          <th class="text-left">Nome (SeteAO)</th>
-          <th class="text-left">Valor CSS</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="item in filtered" :key="item.name">
-          <td style="width: 140px;">
-            <div
-              style="width: 96px; height: 28px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.25);"
-              :style="{ backgroundColor: item.css }"
-            />
-          </td>
-          <td>
-            <code>{{ item.name }}</code>
-          </td>
-          <td>
-            <code>{{ item.css }}</code>
-          </td>
-        </tr>
-      </tbody>
-    </v-table>
+    <div style="max-width: 100%; overflow-x: auto;">
+      <v-table density="comfortable" style="min-width: 520px;">
+        <thead>
+          <tr>
+            <th class="text-left">Pré-visualização</th>
+            <th class="text-left">Nome (SeteAO)</th>
+            <th class="text-left">Valor CSS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in filtered" :key="item.name">
+            <td style="width: 140px;">
+              <div
+                style="width: 96px; height: 28px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.25);"
+                :style="{ backgroundColor: item.css }"
+              />
+            </td>
+            <td style="white-space: nowrap;">
+              <code>{{ item.name }}</code>
+            </td>
+            <td style="white-space: nowrap;">
+              <code>{{ item.css }}</code>
+            </td>
+          </tr>
+        </tbody>
+      </v-table>
+    </div>
   </div>
 </template>
 

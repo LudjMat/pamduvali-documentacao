@@ -62,7 +62,7 @@ de múltiplas linhas
       identificadores:
     </p>
 
-    <div class="grid grid-cols-3 gap-4 mb-6">
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
       <span>VAR</span>
       <span>INTEIRO</span>
       <span>REAL</span>

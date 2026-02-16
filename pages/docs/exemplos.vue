@@ -14,7 +14,7 @@
       Exemplo 1: Cálculo de Média
     </h2>
 
-    <pre class="bg-black p-4 rounded mb-4">
+    <pre class="bg-black p-4 rounded mb-4" style="">
 nota1 = 15 : INTEIRO.
 nota2 = 18 : INTEIRO.
 nota3 = 12 : INTEIRO.

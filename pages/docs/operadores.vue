@@ -37,24 +37,22 @@
       Operadores de Comparação
     </h2>
 
-    <table class="w-full border border-gray-700 mb-6">
-      <thead>
-        <tr class="bg-gray-800">
-          <th class="p-2 border">Operador</th>
-          <th class="p-2 border">Significado</th>
-          <th class="p-2 border">Resultado</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td class="p-2 border">&gt;</td><td class="p-2 border">Maior que</td><td class="p-2 border">LOGICO</td></tr>
-        <tr><td class="p-2 border">&lt;</td><td class="p-2 border">Menor que</td><td class="p-2 border">LOGICO</td></tr>
-        <tr><td class="p-2 border">&gt;=</td><td class="p-2 border">Maior ou igual</td><td class="p-2 border">LOGICO</td></tr>
-        <tr><td class="p-2 border">&lt;=</td><td class="p-2 border">Menor ou igual</td><td class="p-2 border">LOGICO</td></tr>
-        <tr><td class="p-2 border">==</td><td class="p-2 border">Igual</td><td class="p-2 border">LOGICO</td></tr>
-        <tr><td class="p-2 border">!=</td><td class="p-2 border">Diferente</td><td class="p-2 border">LOGICO</td></tr>
-      </tbody>
-    </table>
-
+ <table theme="" class="w-full  border border-gray-700 mb-6">
+    <thead>
+      <tr class="border">
+        <th class="text-left font-weight-bold w-33 border">Operador</th>
+        <th class="text-left font-weight-bold w-33 border">Significado</th>
+        <th class="text-left font-weight-bold w-33 border">Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="item in operadores" :key="item.operador">
+        <td class="py-4 border">{{ item.operador }}</td>
+        <td class="py-4 border">{{ item.significado }}</td>
+        <td class="py-4 border">{{ item.resultado }}</td>
+      </tr>
+    </tbody>
+  </table>
     <!-- Operadores Lógicos -->
     <h2 class="text-2xl font-semibold mt-8 mb-4 text-[#3abbf5]">
       Operadores Lógicos
@@ -90,3 +88,42 @@ EXIBIR("Resultado:", resultado).
     </pre>
   </div>
 </template>
+<script setup>
+const operadores = [
+  { operador: '>', significado: 'Maior que', resultado: 'LOGICO' },
+  { operador: '<', significado: 'Menor que', resultado: 'LOGICO' },
+  { operador: '>=', significado: 'Maior ou igual', resultado: 'LOGICO' },
+  { operador: '<=', significado: 'Menor ou igual', resultado: 'LOGICO' },
+  { operador: '==', significado: 'Igual', resultado: 'LOGICO' },
+  { operador: '!=', significado: 'Diferente', resultado: 'LOGICO' },
+]
+</script>
+
+<style scoped>
+.custom-table {
+  width: 100% !important;
+}
+
+/* Corrigindo o container geral */
+.docs-content .v-table {
+  width: 100% !important;
+  max-width: 100% !important; /* Ou remova se quiser que passe dos 960px */
+  margin-bottom: 1.5rem;
+  /* Removido o display: block; que causava o erro */
+}
+
+/* Forçando a tag table interna do Vuetify */
+.docs-content .v-table :deep(table) {
+  width: 100% !important;
+  display: table; /* Garante que volta ao comportamento normal */
+  table-layout: fixed; /* Distribui as colunas */
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+  .docs-content .v-table :deep(table) {
+    display: table; 
+    min-width: 100%;
+  }
+}
+</style>

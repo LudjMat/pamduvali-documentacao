@@ -4,6 +4,7 @@
       v-for="item in items"
       :key="item.to"
       :to="item.to"
+      @click="emit('navigate')"
       link
       color="primary"
     >
@@ -13,6 +14,8 @@
 </template>
 
 <script setup>
+const emit = defineEmits(['navigate'])
+
 const items = [
   { title: 'Home', to: '/' },
   { title: 'Introdução', to: '/docs/introducao' },
