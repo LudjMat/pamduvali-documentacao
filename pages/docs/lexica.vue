@@ -62,29 +62,17 @@ de múltiplas linhas
       identificadores:
     </p>
 
-    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-      <span>VAR</span>
-      <span>INTEIRO</span>
-      <span>REAL</span>
-      <span>NATURAL</span>
-      <span>TEXTO</span>
-      <span>LOGICO</span>
-      <span>VERDADEIRO</span>
-      <span>FALSO</span>
-      <span>EXIBIR</span>
-      <span>INSERIR</span>
-      <span>SE</span>
-      <span>SENAO</span>
-      <span>E</span>
-      <span>OU</span>
-      <span>NAO</span>
-      <span>RAIZ</span>
-      <span>EXPOENTE</span>
-      <span>ENQUANTO</span>
-      <span>FACA</span>
-      <span>PARA</span>
-      <span>CONTINUAR</span>
-      <span>PARAR</span>
+    <div class="d-flex flex-wrap ga-5 mb-6">
+      <v-chip
+        v-for="w in ['VAR','INTEIRO','REAL','NATURAL','TEXTO','LOGICO','VERDADEIRO','FALSO','EXIBIR','INSERIR','SE','SENAO','E','OU','NAO','RAIZ','EXPOENTE','ENQUANTO','FACA','PARA','CONTINUAR','PARAR']"
+        :key="w"
+        color="primary"
+        variant="tonal"
+        size="normal"
+        class="pa-2"
+      >
+        {{ w }}
+      </v-chip>
     </div>
 
     <!-- Erros Léxicos -->
