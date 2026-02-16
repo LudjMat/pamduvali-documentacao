@@ -18,9 +18,9 @@
       <Sidebar @navigate="onNavigate" />
     </v-navigation-drawer>
 
-    <v-main class="pa-6" style="margin-top: 3.5rem">
+    <v-main class="pa-6" style="margin-top: 3.5rem;  background-image: url('./white_background.svg'); background-position:right">
       <div class="docs-content">
-        <slot />
+        <slot style="background-image: url('./white_background.svg'); background-position:right" />
       </div>
     </v-main>
 

@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pa-6" fluid style="background-color: #0f172a; min-height: 100vh;">
+  <v-container class="" fluid style="background-color: #0f172a; min-height: 100vh;">
     <v-row>
       <v-col cols="12">
         <v-sheet color="#0f172a" elevation="0">
